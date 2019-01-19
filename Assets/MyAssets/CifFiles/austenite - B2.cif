@@ -1,0 +1,86 @@
+data_NiTi_B2
+# NiTi_B2
+_database_code_ICSD 'NiTi_B2'
+_audit_creation_date 'Mon-Jun-06-13:45:20-CEST-2011'
+_space_group_crystal_system 'cubic'
+_space_group_IT_number 221
+_symmetry_space_group_name_H-M 'P m 3 m'
+
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+0 'x ,  y ,  z'
+1 'x , -y , -z'
+2 '-x ,  y , -z'
+3 '-x , -y ,  z'
+4 'y ,  z ,  x'
+5 '-y , -z ,  x'
+6 'y , -z , -x'
+7 '-y ,  z , -x'
+8 'z ,  x ,  y'
+9 '-z ,  x , -y'
+10 '-z , -x ,  y'
+11 'z , -x , -y'
+12 'y ,  x ,  z'
+13 '-y ,  x , -z'
+14 'y , -x , -z'
+15 '-y , -x ,  z'
+16 'z ,  y ,  x'
+17 '-z , -y ,  x'
+18 '-z ,  y , -x'
+19 'z , -y , -x'
+20 'x ,  z ,  y'
+21 'x , -z , -y'
+22 '-x , -z ,  y'
+23 '-x ,  z , -y'
+24 '-x , -y , -z'
+25 '-x ,  y ,  z'
+26 'x , -y ,  z'
+27 'x ,  y , -z'
+28 '-y , -z , -x'
+29 'y ,  z , -x'
+30 '-y ,  z ,  x'
+31 'y , -z ,  x'
+32 '-z , -x , -y'
+33 'z , -x ,  y'
+34 'z ,  x , -y'
+35 '-z ,  x ,  y'
+36 '-y , -x , -z'
+37 'y , -x ,  z'
+38 '-y ,  x ,  z'
+39 'y ,  x , -z'
+40 '-z , -y , -x'
+41 'z ,  y , -x'
+42 'z , -y ,  x'
+43 '-z ,  y ,  x'
+44 '-x , -z , -y'
+45 '-x ,  z ,  y'
+46 'x ,  z , -y'
+47 'x , -z ,  y'
+
+_cell_length_a 3.0149999
+_cell_length_b 3.0149999
+_cell_length_c 3.0149999
+_cell_angle_alpha 90.0
+_cell_angle_beta 90.0
+_cell_angle_gamma 90.0
+
+loop_
+_atom_type_symbol
+_atom_type_oxidation_number
+Ni0    0.
+Ti0    0.
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_B_iso_or_equiv
+_atom_site_occupancy
+_atom_site_absorption
+Ni0 Ni0 _ 0.0 0.0 0.0 0.5 1.0 0.049
+Ti1 Ti0 _ 0.5 0.5 0.5 0.5 1.0 0.043
+#End of data
