@@ -152,7 +152,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.google.ar.core.examples.unity.cloudanchors
+    Android: be.kdg.SharedARTest
     Standalone: be.kdg.SharedARTest
   buildNumber: {}
   AndroidBundleVersionCode: 1
@@ -677,7 +677,7 @@ PlayerSettings:
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
   additionalIl2CppArgs: 
-  scriptingRuntimeVersion: 0
+  scriptingRuntimeVersion: 1
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
@@ -747,9 +747,13 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Build: 0
+    Collab: 0
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 4a72733c-764b-4dfd-bc33-1ed5b3be74f2
   projectName: HelloAR U3D
   organizationId: den_drummer

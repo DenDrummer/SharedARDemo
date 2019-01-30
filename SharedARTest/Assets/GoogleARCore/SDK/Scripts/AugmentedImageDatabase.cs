@@ -284,7 +284,7 @@ namespace GoogleARCore
             Debug.LogFormat("Built AugmentedImageDatabase '{0}' ({1} Images, {2} KBytes)", name, Count,
                 m_RawData.Length/BYTES_IN_KBYTE);
 
-            // TODO:: Remove this log when all errors/warnings are moved to stderr for CLI tool.
+            // TO-DO:: Remove this log when all errors/warnings are moved to stderr for CLI tool.
             Debug.Log(output);
         }
         /// @endcond
