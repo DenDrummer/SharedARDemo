@@ -28,6 +28,7 @@ namespace GoogleARCore.Examples.CloudAnchors
     /// </summary>
     public class CloudAnchorsExampleController : MonoBehaviour
     {
+        #region ARCore
         [Header("ARCore")]
 
         /// <summary>
@@ -44,7 +45,9 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// The helper that will calculate the World Origin offset when performing a raycast or generating planes.
         /// </summary>
         public ARCoreWorldOriginHelper ARCoreWorldOriginHelper;
+        #endregion
 
+        #region ARKit
         [Header("ARKit")]
 
         /// <summary>
@@ -61,7 +64,9 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// A helper object to ARKit functionality.
         /// </summary>
         private ARKitHelper m_ARKit = new ARKitHelper();
+        #endregion
 
+        #region private variables
         /// <summary>
         /// Indicates whether the Origin of the new World Coordinate System, i.e. the Cloud Anchor, was placed.
         /// </summary>
@@ -91,6 +96,7 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// The current cloud anchor mode.
         /// </summary>
         private ApplicationMode m_CurrentMode = ApplicationMode.Ready;
+        #endregion
 
         /// <summary>
         /// Enumerates modes the example application can be in.
@@ -107,8 +113,8 @@ namespace GoogleARCore.Examples.CloudAnchors
         /// </summary>
         public void Start()
         {
-            // A Name is provided to the Game Object so it can be found by other Scripts instantiated as prefabs in the
-            // scene.
+            // A Name is provided to the Game Object so it can be found
+            // by other Scripts instantiated as prefabs in the scene.
             gameObject.name = "CloudAnchorsExampleController";
             ARCoreRoot.SetActive(false);
             ARKitRoot.SetActive(false);
