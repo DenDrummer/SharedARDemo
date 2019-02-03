@@ -14,10 +14,10 @@ public class DropboxTester : MonoBehaviour {
 	void Start () {
         DropBoxFileHandler.login();
 
-        List<KeyValuePair<string, string>> structures = DropBoxFileHandler.download();
+        List<KeyValuePair<string, string>> structures = DropBoxFileHandler.GetFiles();
         //Debug.Log($"rectangle height: {Content.rect.height}");
 
-        Vector3 rowLocation = new Vector3(0, -25, 0);
+        Vector3 rowLocation = new Vector3(0, -50, 0);
         int i = 0;
         foreach (KeyValuePair<string, string> structure in structures)
         {

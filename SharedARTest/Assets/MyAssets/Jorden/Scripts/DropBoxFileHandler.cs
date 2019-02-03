@@ -10,6 +10,8 @@ public static class DropBoxFileHandler
 {
     private static DropboxClient dbxc;
 
+    private static List<KeyValuePair<string, string>> files;
+
     static DropBoxFileHandler()
     {
         dbxc = new DropboxClient("eA-3wCl2mnAAAAAAAAAADjzQvSY_w9VFv7q4nX9lkbrKFQPdlzcb6FktepLKuMKz");
@@ -21,11 +23,24 @@ public static class DropBoxFileHandler
         task.Wait();
     }
 
-    public static List<KeyValuePair<string, string>> download()
+    public static List<KeyValuePair<string, string>> GetFiles()
     {
+        if (files!=null)
+        {
+            return files;
+        }
         Task<List<KeyValuePair<string, string>>> task = Task.Run(Download);
         task.Wait();
         return task.Result;
+    }
+
+    public static string GetFileContent(string fileKey)
+    {
+        if (files==null)
+        {
+            GetFiles();
+        }
+        return files.Find(file => file.Key.Equals(fileKey)).Value;
     }
 
     private static async Task<List<KeyValuePair<string, string>>> Download()
@@ -43,7 +58,7 @@ public static class DropBoxFileHandler
         #endregion
 
         #region download files
-        List<KeyValuePair<string, string>> files = new List<KeyValuePair<string, string>>();
+        files = new List<KeyValuePair<string, string>>();
         foreach (Metadata item in items)
         {
             //Debug.Log($"File path: {item.PathDisplay}");
