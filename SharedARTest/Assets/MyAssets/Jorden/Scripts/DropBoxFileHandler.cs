@@ -8,7 +8,12 @@ using UnityEngine;
 
 public static class DropBoxFileHandler
 {
-    private static DropboxClient dbxc = new DropboxClient("eA-3wCl2mnAAAAAAAAAADjzQvSY_w9VFv7q4nX9lkbrKFQPdlzcb6FktepLKuMKz");
+    private static DropboxClient dbxc;
+
+    static DropBoxFileHandler()
+    {
+        dbxc = new DropboxClient("eA-3wCl2mnAAAAAAAAAADjzQvSY_w9VFv7q4nX9lkbrKFQPdlzcb6FktepLKuMKz");
+    }
 
     public static void login()
     {
@@ -31,29 +36,34 @@ public static class DropBoxFileHandler
             .Entries
             .Where(item => item.IsFile)
             .ToList();
-        foreach (Metadata item in items)
+        /*foreach (Metadata item in items)
         {
-            Debug.Log($"F{item.AsFile.Size,8} {item.Name}");
-        }
+            Debug.Log($"Dropbox file {item.AsFile.Size}B - {item.Name}");
+        }*/
         #endregion
 
         #region download files
         List<KeyValuePair<string, string>> files = new List<KeyValuePair<string, string>>();
         foreach (Metadata item in items)
         {
-            var response = await dbxc.Files.DownloadAsync(item.Name);
-            files.Add(new KeyValuePair<string, string>(
+            //Debug.Log($"File path: {item.PathDisplay}");
+            var response = await dbxc.Files.DownloadAsync(item.PathDisplay);
+            string content = await response.GetContentAsStringAsync();
+            //Debug.Log("first row of text: \n" + content.Split('\n')[0]);
+            KeyValuePair<string, string> newPair = new KeyValuePair<string, string>(
                     item.Name.Substring(0, item.Name.Length - 4),
-                    await response.GetContentAsStringAsync()));
+                    content);
+            //Debug.Log(newPair.Key);
+            files.Add(newPair);
         }
         #endregion
-
+        //Debug.Log("files: " + files.Count);
         return files;
     }
 
     private static async Task Login()
     {
         FullAccount full = await dbxc.Users.GetCurrentAccountAsync();
-        Debug.Log($"{full.Name.DisplayName} - {full.Email}");
+        //Debug.Log($"Logged in on Dropbox: {full.Name.DisplayName} - {full.Email}");
     }
 }

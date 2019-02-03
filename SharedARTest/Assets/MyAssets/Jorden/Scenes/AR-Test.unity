@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -406,8 +406,11 @@ MonoBehaviour:
   NetworkUIController: {fileID: 1416474745}
   ARCoreRoot: {fileID: 2038396759}
   ARCoreWorldOriginHelper: {fileID: 1077437345}
+  ARKitRoot: {fileID: 0}
+  ARKitFirstPersonCamera: {fileID: 0}
   sleepTimeOut: 15
   quitDelay: 0
+  defaultCif: 
 --- !u!4 &1159794181
 Transform:
   m_ObjectHideFlags: 0
@@ -829,12 +832,36 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4131701563428788, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131701563428788, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131701563428788, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131701563428788, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131701563428788, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131701563428788, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131701563428788, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131701563428788, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1360560798125284, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3fdcaff6d8fba845a9158dd88f921a6, type: 2}
@@ -847,6 +874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2038396760}
+  - component: {fileID: 2038396761}
   m_Layer: 0
   m_Name: ARCore Root
   m_TagString: Untagged
@@ -870,6 +898,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2038396761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038396759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a915aec9c9222640a28aa4a9e12820b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Atom: {fileID: 0}
+  Bond: {fileID: 0}
 --- !u!1001 &2143107660
 Prefab:
   m_ObjectHideFlags: 0
